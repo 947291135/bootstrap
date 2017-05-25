@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style2.css" />
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<style>
+		.slide-nav{
+			position: fixed;
+			top: 45%;
+			right: 20px;
+			z-index: 1;
+		}
+		.slide-nav ul .nav-side-nav{
+			text-align: center;
+			list-style: none;
+			margin: 0px;
+			padding-left: 0px;
+		}
+		.slide-nav ul.nav-side-nav >li{
+			display: block;
+			line-height: 1.45em;
+			margin: 0;
+			padding: 8px 0;
+		}
+		.slide-nav ul.nav-side-nav >li >a{
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #e2e2e2;
+		}
+			.onepage{
+				height: 700px;
+				padding-top: 45px;
+			}
+			.onepage-bg{
+				position: absolute;
+				height: 700px;
+				width: 100%;
+				background-size: cover;
+				background-position: center center;
+			}
+			#onepagebg{
+				background-image: url(img/1.jpg);
+			}
+			.heading{
+				position: absolute;
+				width: 100%;
+			}
+			#menu{
+				background-color:rgb(34,34,34);
+			}
+			#menu li>a{
+				color: white;
+			}
+			#menu li>a:hover{
+				color: #000000;
+			}
+			li:hover{
+				cursor: pointer;
+			}
+			.alert-link{
+				margin-right: 10px;
+				color: white;
+				cursor: pointer;
+			}
+			.headfontsize{
+				margin-top: 154px;
+			}
+			.headh1{
+				color: #FFFFFF;
+			}
+			.headfontsize p{
+				margin-top: 30px;
+				color: #9D9D9D
+			}
+			.twopage{
+				padding: 2px 0 0 2px;
+				height: auto;
+				background-color:  #E6E6E6;
+				position: relative;
+				height: :;;
+			}
+			.twopage-texe{
+				width: 100%;
+				text-align: center;
+			}
+			.twopage-texe-h1{
+				letter-spacing: 2px;
+				margin-top: 80px;
+				margin-bottom: 20px;
+				padding: 20px 0 0 0;
+			}
+			.twopage .row{
+				margin-right: 0px;
+				margin-left: 0px;
+			}
+			.twopage-courses{
+				float: left;
+				background-color: #FFFFFF;
+				padding: 0 2px 2px 0;
+				position: relative;
+				overflow: hidden;
+			}
+			.twopage-courses a{
+				width: 100%;
+				height: 100%;
+				float: left;
+				text-align: center;
+				position: relative;
+			}
+			.classicon h3{
+				margin-top: 120px;
+				color: #d1e973;
+			}
+			.classicon h1{
+				color: #fff5e1;
+			}
+			.classicon{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: #fff;
+				opacity: 0;
+			}
+			.classicon:hover{
+				background: #1eb450;
+				opacity: 0.9;
+				transition: opacity 1s;
+			}
+			.towpagebtn{
+				width: 100%;
+				margin: 0% auto;
+				text-align: center;
+			}
+			.towpagebtn .btn-lg{
+				font-size: 25px;
+			}
+			#towpage-easy{
+				margin-top: 100px;
+				margin-bottom: 100px;
+			}
+			.threepage{
+				background: url(img/140-150613094128.jpg); background-size: cover;
+				background-position: center center;
+				position: relative;
+				height: 700px;
+			}
+			.threepage-text{
+				width: 100%;
+				text-align: center;
+				margin-top: 105px;
+			}
+			.threepagebtn{
+				width: 100%;
+				text-align: center;
+			}
+			#threepage-easy{
+				margin-top: 45px;
+				margin-bottom: 45px;
+			}
+			.progress-JN{
+				margin: 15px auto;
+			}
+			.progress-JN label{
+				color: white;
+			}
+			.fourpage{
+				height: 700px;
+				background-color: #1EB450;
+				position: relative;
+			}
+			.coursexinqing-text{
+				color: #FFFFFF;
+				margin-top: 100px;
+				width: 100%;
+				text-align: center;
+			}
+			.coursexinqing-text p{
+				margin-top: 25px;
+				font-size: 25px;
+			}
+			.fourpage .container .carousel{
+				margin-top: 100px;
+			}
+			.carousel-control.left {
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+			}
+			.carousel-control.right {
+    right: 0;
+    left: auto;
+      background-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+			.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    left: -20%;
+    margin-left: -10px;
+}			
+			.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    right: -20%;
+    margin-right: -10px;
+}			.carousel-text{
+				right: -165%;
+				padding-bottom: 190px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="slide-nav" role="navigation">
+			<ul class="nav-side-nav">
+				<li><a class="tooltip-side-nav" href="#onepage"></a></li>
+				<li><a class="tooltip-side-nav" href="#towpage"></a></li>
+				<li><a class="tooltip-side-nav" href="#threepage"></a></li>
+				<li><a class="tooltip-side-nav" href="#fourpage"></a></li>
+			</ul>
+		</div>
+		<div class="heading">
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand">
+							<img src="img/logo.png" style="width: 75px;" />
+						</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a>首页</a></li>
+							<li><a>我的简历</a></li>
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle = "dropdown">我的经历</a>
+								<ul class="dropdown-menu" id="menu">
+									<li><a href="#">大一</a></li>
+									<li><a href="#">大二</a></li>
+								</ul>
+							</li>
+						</ul>
+						<p class="navbar-text navbar-right"><a class="alert-link" href="#">登陆</a><a class="alert-link" href="#">注册</a></p>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="onepage" id="onepage">
+			<div class="onepage-bg" id="onepagebg"></div>
+			<div class="container" >
+				<div class="row">
+					<div class="col-md-12 headfontsize">
+						<h1 class="headh1">
+							只要了解<br/>
+							在这里你能了解这里的一切，知道我的所有
+						</h1>
+						<p style="">无时无刻的学习，提高自己的认知，相信程序对你而言小菜一碟，<br>一定可以顺利拿下</p>
+						<p class="btn-app-stroe">
+							<a class="btn btn-success btn-lg" href="#">开始了解,我的一切</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="twopage" id="towpage">
+			<div class="twopage-texe">
+				<h1 class="twopage-texe-h1">开始了解我的母校</h1>
+			</div>
+			<div class="row">
+				<div class="twopage-courses col-md-4">
+					<a>
+						<img src="img/90.jpg"  style="height: 100%; width: 100%;"/>
+						<div class="classicon">
+							<h3>我的学校</h3>
+							<h1><strong>深圳信息职业技术学院</strong></h1>
+						</div>
+					</a>
+				</div>
+				<div class="twopage-courses col-md-4">
+					<a>
+						<img src="img/90.jpg"  style="height: 100%; width: 100%;"/>
+						<div class="classicon">
+							<h3>我的学校</h3>
+							<h1><strong>深圳信息职业技术学院</strong></h1>
+						</div>
+					</a>
+				</div>
+				<div class="twopage-courses col-md-4">
+					<a>
+						<img src="img/90.jpg"  style="height: 100%; width: 100%;"/>
+						<div class="classicon">
+							<h3>我的学校</h3>
+							<h1><strong>深圳信息职业技术学院</strong></h1>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="towpagebtn">
+				<a id="towpage-easy" href="#" class="btn btn-success btn-lg">更多照片，点击查询</a>
+			</div>
+		</div>
+		<div class="threepage" id="threepage">
+			<div class="container">
+				<div class="threepage-text">
+					<h1>天赋技能的学习</h1>
+				</div>
+				<div class="row">
+					<div class="progress-JN col-md-12">
+						<label>.net</label>
+						<div class="progress">
+							<div class="progress-bar progress-bar-info progress-bar-striped active" aria-valuenow="80" aria-valuemin="0"  aria-valuemax="100" style="width: 80%;">
+								<span>80%</span>
+							</div>
+						</div>
+					</div>
+					<div class="progress-JN col-md-12">
+						<label>HTML/CSS</label>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success progress-bar-striped active" aria-valuenow="75" aria-valuemin="0"  aria-valuemax="100" style="width: 75%;">
+								<span>75%</span>
+							</div>
+						</div>
+					</div>
+					<div class="progress-JN col-md-12">
+						<label>Bootstrap</label>
+						<div class="progress">
+							<div class="progress-bar progress-bar-warning progress-bar-striped active" aria-valuenow="60" aria-valuemin="0"  aria-valuemax="100" style="width: 65%;">
+								<span>65%</span>
+							</div>
+						</div>
+					</div>
+					<div class="progress-JN col-md-12">
+						<label>SQL</label>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger progress-bar-striped active" aria-valuenow="60" aria-valuemin="0"  aria-valuemax="100" style="width: 60%;">
+								<span>60%</span>
+							</div>
+						</div>
+					</div>
+					<div class="threepagebtn">
+						<a id="threepage-easy" href="#" class="btn btn-success btn-lg">更多天赋，点击查看</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fourpage" id="fourpage">
+			<div class="container" style="70%">
+				<div class="coursexinqing-text">
+					<h1>我的详细情况</h1>
+					<p>有效的利用时间才是最好的学习方式，你说呢？</p>
+				</div>
+				<div id="carousel-example-generic" class="carousel slide carousel" data-interval = "5000" style="height: 300px;">
+					<ol class="carousel-indicators" style="margin-top: 200px;">
+						<li data-target = "#carousel-example-generic" data-slide-to = "0" class="active"></li>
+						<li data-target = "#carousel-example-generic" data-slide-to = "1" class=""></li>
+						<li data-target = "#carousel-example-generic" data-slide-to = "2" class=""></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active" style="width: 500px;">
+							<img src="img/3143484_1.jpg" />
+							<div class="carousel-caption carousel-text">
+								<h3>这是第一张图片</h3>
+								<p>本来想说点什么的可是又不知道说什么<br/>
+									就在这里做一下演示吧，在新的一年，快快乐乐
+								</p>
+							</div>
+						</div>
+						<div class="item" style="width: 500px;">
+							<img src="img/3143484_2.jpg" />
+							<div class="carousel-caption carousel-text">
+								<h3>这是第一张图片</h3>
+								<p>本来想说点什么的可是又不知道说什么<br/>
+									就在这里做一下演示吧，在新的一年，快快乐乐
+								</p>
+							</div>
+						</div>
+						<div class="item" style="width: 500px;">
+							<img src="img/3143484_5.jpg" />
+							<div class="carousel-caption carousel-text">
+								<h3>这是第一张图片</h3>
+								<p>本来想说点什么的可是又不知道说什么<br/>
+									就在这里做一下演示吧，在新的一年，快快乐乐
+								</p>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-example-generic" data-slide = "prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" data-slide = "next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(".navbar-nav a").click(function(e){
+				$(this).tab("show");
+			})
+			
+		</script>
+	</body>
+</html>
